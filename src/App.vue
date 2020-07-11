@@ -21,14 +21,6 @@ export default {
     ErrorConponent,
     AppDialog,
   },
-  data: () => ({}),
-  created() {},
-  mounted() {
-  },
-  methods: {
-  },
-  computed: {
-  },
 };
 </script>
 
