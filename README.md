@@ -7,7 +7,8 @@
 
 
 
-#### This game uses the minimax algorithm and also it is a progressive web application.
+#### This app uses the navigator API. In case user rejected the offer app uses third party APIs to check IP, Location, Weather. 
+#### Also it is a progressive web application.
 
 *It means that the application can be installed on your device (laptop, iPad, smartphone, etc.)*
 
