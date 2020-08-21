@@ -116,7 +116,9 @@ async function appInit() {
     userLocationInfo = await getNavigatorInfo();
   } catch (error) {
     console.log(error);
-    Store.dispatch('setDialogStatus', true);
+    if (error !== 'NO_NAVIGATOR' && error.code !== 1) {
+      Store.dispatch('setDialogStatus', true);
+    }
   }
 
   if (!userLocationInfo) {
