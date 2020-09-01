@@ -25,6 +25,7 @@ export default {
 </script>
 
 <style lang="scss">
+
   /*Обнуление*/
   *{
     padding: 0;
@@ -38,9 +39,11 @@ export default {
   a:focus,a:active{outline: none;}
 
   nav,footer,header,aside{display: block;}
+
   html{
     font-size: 14px;
   }
+
   body{
     font-size: 1rem;
   }

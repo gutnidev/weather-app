@@ -17,6 +17,7 @@ const Store = new Vuex.Store({
       dialogMessage: 'Нужны точные данные? Включи местоположение!',
     },
   },
+
   mutations: {
     ACTIVATE_INIT_ERROR(state) {
       state.InitError.errorStatus = true;
@@ -28,6 +29,7 @@ const Store = new Vuex.Store({
       state.dialogError.dialogStatus = status;
     },
   },
+
   actions: {
     activateInitError({ commit }) {
       commit('ACTIVATE_INIT_ERROR');
@@ -44,6 +46,7 @@ const Store = new Vuex.Store({
       commit('SET_DIALOG_STATUS', status);
     },
   },
+
   getters: {
     isError(state) {
       return state.InitError;
@@ -52,6 +55,7 @@ const Store = new Vuex.Store({
       return state.dialogError;
     },
   },
+
   modules: {
     user,
     weather,
@@ -60,9 +64,8 @@ const Store = new Vuex.Store({
 
 function formWeatherParams(locationInfo, language = null) {
   if (!locationInfo) return false;
-  let params = null;
 
-  params = locationInfo.lat && locationInfo.lon
+  let params = locationInfo.lat && locationInfo.lon
     ? { lat: locationInfo.lat, lon: locationInfo.lon }
     : null;
 
@@ -79,8 +82,8 @@ async function getNavigatorInfo() {
     // eslint-disable-next-line prefer-promise-reject-errors
     return Promise.reject('NO_NAVIGATOR');
   }
-  let position = false;
-  position = await new Promise((resolve, reject) => {
+
+  const position = await new Promise((resolve, reject) => {
     window.navigator.geolocation.getCurrentPosition(
       (location) => {
         resolve({
@@ -96,6 +99,7 @@ async function getNavigatorInfo() {
   }, {
     timeout: 1000,
   });
+
   return position;
 }
 
