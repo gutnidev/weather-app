@@ -33,7 +33,7 @@ export default {
     ...mapGetters('weather', ['image', 'degree', 'description', 'city']),
     computedImg() {
       // eslint-disable-next-line global-require
-      return this.weatherImage ? this.weatherImage : require('../assets/test-icon.png');
+      return this.image ? this.image : require('../assets/test-icon.png');
     },
     weatherDescription() {
       let desc = this.description;
