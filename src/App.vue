@@ -27,6 +27,7 @@ export default {
 <style lang="scss">
 
   /*Обнуление*/
+
   *{
     padding: 0;
     margin: 0;
