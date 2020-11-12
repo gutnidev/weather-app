@@ -1,6 +1,6 @@
 # Vue-Pwa app: Weather
 ### Demo:
-#### https://gutnivlad.github.io/weather-app/
+#### https://gutnidev.github.io/weather-app/
 
 
 ------------
